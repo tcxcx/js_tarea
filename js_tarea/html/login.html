@@ -10,7 +10,6 @@
 </head>
 <body>
   <div class="page-wrap">
-    
     <div class="left-panel">
       <div class="illustration">
         <img src="eb.png" alt="Illustration" class="image" />
@@ -27,14 +26,14 @@
         <h3>Entra a tu cuenta</h3>
         <div class="form-group">
           <label for="username">Username</label>
-          <input type="text" id="username" class="username" />
+          <input type="text" name="u" id="username" class="username" />
         </div>
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" id="password" class="password" />
+          <input type="password" name="p" id="password" class="password"/>
         </div>
         <div class="form-group flex-end">
-          <input type="submit" value="LOGIN" class="button" />
+          <input type="button" value="LOGIN" class="button" onclick="login(this.form)"/>
         </div>
         <div class="lost-password">
           <a href="#" class="link">Forgot your password?</a>
@@ -47,19 +46,6 @@
 
   </div>
 
-  <script type="text/javascript">
-    let input_fields = document.querySelectorAll('input');
-    
-    for (let i = 0; i < input_fields.length; i++) {
-      let field = input_fields[i];
-      field.addEventListener('input', function (e) {
-        if (e.target.value != "") {
-          e.target.parentNode.classList.add('has-content');
-        } else if (e.target.value == "") {
-          e.target.parentNode.classList.remove('has-content');
-        }
-      });
-    }
-  </script>
+<script src="login.js"></script>
 </body>
 </html>
